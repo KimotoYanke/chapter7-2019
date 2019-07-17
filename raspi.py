@@ -56,3 +56,6 @@ while True:
     db.collection('temperature').document(str(datetime.datetime.now())).set(data)
     time.sleep(1)
     '''
+
+while True:
+    pass
