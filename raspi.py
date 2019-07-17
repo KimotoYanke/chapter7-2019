@@ -46,8 +46,6 @@ off_ref = db.collection('led').where(u'led', u'==', u'OFF')
 doc_watch = on_ref.on_snapshot(on_snapshot)
 doc_watch = off_ref.on_snapshot(on_snapshot)
 
-while True:
-    pass
 '''
 while True:
     block = i2c.read_i2c_block_data(address, 0x00, 12)
@@ -60,3 +58,5 @@ while True:
     time.sleep(1)
     '''
 
+while True:
+    pass
