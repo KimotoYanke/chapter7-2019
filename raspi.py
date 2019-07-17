@@ -46,7 +46,7 @@ off_ref = db.collection('led').where(u'led', u'==', u'OFF')
 doc_watch = on_ref.on_snapshot(on_snapshot)
 doc_watch = off_ref.on_snapshot(on_snapshot)
 
-'''
+
 while True:
     block = i2c.read_i2c_block_data(address, 0x00, 12)
     temp = (block[0] << 8 | block[1]) >> 3
@@ -56,7 +56,7 @@ while True:
     data = {"temp": temp / 16.0}
     db.collection('temperature').document(str(datetime.datetime.now())).set(data)
     time.sleep(1)
-    '''
+
 
 while True:
     pass
